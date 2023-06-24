@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: "mongodb+srv://test_user:Test123@cluster0.cfmd8.mongodb.net/chat_app_db"
+
+server:
+  port: 8083
