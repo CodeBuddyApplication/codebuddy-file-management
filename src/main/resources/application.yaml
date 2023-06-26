@@ -1,7 +1,32 @@
 spring:
-  data:
-    mongodb:
-      uri: "mongodb+srv://test_user:Test123@cluster0.cfmd8.mongodb.net/chat_app_db"
+  application:
+    name: file-management-service
+  data.mongodb:
+    uri: "mongodb+srv://codebuddy-test:Test123@cluster0.cfmd8.mongodb.net/codebuddy"
 
-server:
-  port: 8083
+info:
+  app:
+    name: Codebuddy File Management Service
+    description: File Management Service for Codebuddy
+    version: 1.0.0
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+
